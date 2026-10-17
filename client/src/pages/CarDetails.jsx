@@ -22,7 +22,7 @@ const CarDetails = () => {
     const handleDelete = async () => {
         try {
             await CarsAPI.deleteCar(id)
-            navigate('/cars')
+            navigate('/customcars')
         } catch (error) {
             console.error(error)
         }
@@ -51,7 +51,7 @@ const CarDetails = () => {
             <h3>${Number(car.price).toLocaleString()}</h3>
             <Link to={`/edit/${car.id}`}>Edit</Link>{' '}
             <button onClick={handleDelete}>Delete</button>{' '}
-            <Link to="/cars">Back to all cars</Link>
+           <Link to="/customcars">Back to all cars</Link> 
         </div>
     )
 }
